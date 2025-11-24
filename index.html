@@ -1,0 +1,339 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "Heebo", sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        .bar {
+            background-color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .bar ul {
+            list-style: none;
+            display: flex;
+            justify-content: flex-end;
+            padding: 15px 30px;
+        }
+        .bar li {
+            margin-left: 25px;
+            font-weight: 500;
+        }
+        .bar li a {
+            text-decoration: none;
+            color: #333;
+        }
+        #ggre {
+            color: rgb(255, 115, 0);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 180px 50px 50px 50px;
+            background-color: #f0f8ff;
+        }
+        .para {
+            max-width: 600px;
+        }
+        .para h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .para p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .resume button {
+            background-color: rgb(253, 91, 91);
+            color: #fff;
+            border: none;
+            padding: 12px 28px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        .man img {
+            height: 243px;
+            width: 243px;
+            border-radius: 50%;
+        }
+
+        /* Recent Posts */
+        .recent {
+            background-color: #edf7fa;
+            padding: 50px 50px;
+        }
+        .recent h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .white, .ndwhite {
+            background-color: #fff;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+        }
+
+        /* Featured Works */
+        .featured {
+            background-color: #fff;
+            padding: 50px 50px;
+        }
+        .featured h2 {
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+        .featured img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 30px;
+        }
+
+        /* Responsive Media Queries */
+        @media (max-width: 1200px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+            .hero .man {
+                margin-top: 30px;
+            }
+            .bar ul {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .para h1 {
+                font-size: 36px;
+            }
+            .para p {
+                font-size: 16px;
+            }
+            .man img {
+                width: 180px;
+                height: 180px;
+            }
+            .white, .ndwhite {
+                width: 90%;
+                margin: 20px auto;
+            }
+        }
+/* Featured Works */
+.featured {
+    background-color: #fff;
+    padding: 50px 20px;
+}
+.featured h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.featured-container {
+    display: flex;
+    flex-direction: column; /* vertical stack */
+    gap: 30px;
+}
+
+.featured-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.featured-item img {
+    width: 246px;
+    height: 180px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.featured-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.featured-text h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.featured-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .featured-item img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .featured-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-item img {
+        width: 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .featured-item img {
+        width: 100%;
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    .featured-container img {
+        width: 200px;
+        height: 150px;
+    }
+}
+@media (max-width: 480px) {
+    .featured-container img {
+        width: 100%;
+        height: auto;
+    }
+}
+        @media (max-width: 480px) {
+            .bar ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .para h1 {
+                font-size: 28px;
+            }
+            .para p {
+                font-size: 14px;
+            }
+            .resume button {
+                width: 100%;
+            }
+            .man img {
+                width: 140px;
+                height: 140px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="bar">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#" id="ggre">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="para">
+            <h1>Hello, I am Oun raza qaim khani</h1>
+            <p>Creative designer and developer crafting responsive and modern websites for all devices.</p>
+            <div class="resume">
+                <button>Download Resume</button>
+            </div>
+        </div>
+        <div class="man">
+            <img src="WhatsApp Image 2025-05-31 at 16.54.39_5e769c48.jpg" alt="Profile Image">
+        </div>
+    </section>
+
+    <!-- Recent Posts -->
+    <section class="recent">
+        <h2>Recent Posts</h2>
+        <div class="white">
+            <h3>Post Title 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorum delectus excepturi assumenda velit rem, quod temporibus porro sequi optio labore animi nemo in id dolorem sunt odio est minima corporis adipisci?
+
+            </p>
+        </div>
+        <div class="ndwhite">
+            <h3>Post Title 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam dignissimos inventore autem saepe praesentium! Natus eum consequuntur recusandae nihil est fugit facilis cumque delectus dicta explicabo reprehenderit quis, velit aliquam omnis.
+
+            </p>
+        </div>
+    </section>
+
+<!-- Featured Works -->
+<section class="featured">
+    <h2>Featured Works</h2>
+    <div class="featured-container">
+        <div class="featured-item">
+            <img src="download.jpeg" alt="Work 1">
+            <div class="featured-text">
+                <h3>Designing Dashboards</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, <br> exercitationem a ratione natus, maxime assumenda ad modi nobis  <br>vel vero perferendis pariatur harum rem libero fuga magnam <br> dolorem consequatur numquam.</p>
+            </div>
+        </div>
+        <div class="featured-item">
+            <img src="download (2).jpeg" alt="Work 2">
+            <div class="featured-text">
+                <h3>Vibrant Portraits of 2020</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, <br> exercitationem a ratione natus, maxime assumenda ad modi nobis  <br>vel vero perferendis pariatur harum rem libero fuga magnam <br> dolorem consequatur numquam.</p>
+            </div>
+        </div>
+        <div class="featured-item">
+            <img src="images.jpeg" alt="Work 3">
+            <div class="featured-text">
+                <h3>Dashboards</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, <br> exercitationem a ratione natus, maxime assumenda ad modi nobis  <br>vel vero perferendis pariatur harum rem libero fuga magnam <br> dolorem consequatur numquam.</p>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
